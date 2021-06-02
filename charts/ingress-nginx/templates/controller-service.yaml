@@ -81,4 +81,5 @@ spec:
   selector:
     {{- include "ingress-nginx.selectorLabels" . | nindent 4 }}
     app.kubernetes.io/component: controller
+  ipFamilyPolicy: {{ .Values.controller.service.ipFamilyPolicy }}
 {{- end }}
